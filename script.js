@@ -1,6 +1,7 @@
 const texts = [
             "Bot Programmer (Python).",
-            "Web Programmer."
+            "Web Programmer.",
+            "Own Two Servers"
 ];
 let index = 0;
 
