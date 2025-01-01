@@ -17,6 +17,11 @@ html {
     font-family: CustomFont;
     color: white;
     text-align: justify;
+    cursor:default;
+}
+
+*::selection {
+    background: none;
 }
 
 #first_page {
@@ -45,6 +50,7 @@ html {
     margin-top: 5%;
     margin-left: 3.5%;
     font-size: 3rem;
+    white-space: nowrap;
 }
 
 #animation {
@@ -64,9 +70,12 @@ html {
 }
 
 #description {
-    width: 30vw; /* Keep original width */
+    width: 30vw;
     margin: 20px;
     margin-left: 3.5%;
+    overflow-wrap: break-word;  /* Allow word wrapping */
+    word-wrap: break-word;      /* For better browser support */
+    white-space: pre-wrap;      /* Preserve whitespace but allow wrapping */
 }
 
 #profile {
