@@ -13,11 +13,14 @@ html {
     src: url('TT Firs Neue Trial Medium.ttf');
 }
 
+
 * {
     font-family: CustomFont;
     color: white;
     text-align: justify;
     cursor:default;
+    margin: 20px;
+
 }
 
 *::selection {
@@ -27,17 +30,17 @@ html {
 #first_page {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-    padding: 20px; /* Add padding for spacing */
+    align-items: flex-start;
+    padding: 20px;
 }
 
 #top {
-    margin: 20px; /* Add margin for spacing */
-    padding: 10px; /* Use positive padding */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: background for visibility */
-    border-radius: 5px; /* Optional: rounded corners */
+    margin: 20px; 
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px;
     z-index: 1;
-    position: relative; /* Add position for z-index to work */
+    position: relative; 
 }
 
 #name {
@@ -73,45 +76,83 @@ html {
     width: 30vw;
     margin: 20px;
     margin-left: 3.5%;
-    overflow-wrap: break-word;  /* Allow word wrapping */
-    word-wrap: break-word;      /* For better browser support */
-    white-space: pre-wrap;      /* Preserve whitespace but allow wrapping */
+    overflow-wrap: break-word; 
+    word-wrap: break-word;     
+    white-space: pre-wrap;   
 }
 
 #profile {
     margin: 20px;
     margin-top: -20%;
     margin-left: 65%;
-    max-width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     #welcome {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        font-size: 2.5rem; 
     }
 
     #animation {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem; 
     }
 
     #description {
-        width: 80%; /* Adjust width for smaller screens */
+        width: 80%; 
     }
 
     #profile {
-        margin-left: 0; /* Center image on smaller screens */
-        margin-top: 10px; /* Add top margin */
+        margin-left: 0; 
+        margin-top: 10px; 
     }
 }
 
 @media (max-width: 480px) {
     #welcome {
-        font-size: 2rem; /* Further adjust for mobile */
+        font-size: 2rem; 
     }
 
     #animation {
-        font-size: 1.2rem; /* Further adjust for mobile */
+        font-size: 1.2rem; 
     }
+}
+
+#second_top {
+    margin: 20px; 
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px; 
+    z-index: 1;
+    position: relative; 
+}
+
+#Staff_Experiences {
+    margin: 20px;
+}
+
+#GVRC, #NGVR, #GVRR {
+    border-radius: 30px;
+    height: auto;
+    max-width: 100%; 
+}
+
+@media (max-width: 768px) {
+    #evidence {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #GVRC, #NGVR, #GVRR {
+        height: 40vh;
+        max-width: 90%;
+    }
+}
+
+#evidence {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
 }
