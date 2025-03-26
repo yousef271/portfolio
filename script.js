@@ -1,16 +1,17 @@
 const texts = [
             "Bot Programmer (Python).",
             "Web Programmer.",
-            "Own Two Servers"
+            "Own Two Servers",
+            "High Experienced HR Staff"
 ];
 let index = 0;
 
 function typeText(text, callback) {
     const animationElement = document.getElementById('animation');
-    animationElement.innerHTML = ''; // Clear previous text
-    animationElement.style.borderRight = '0'; // Hide cursor during typing
+    animationElement.innerHTML = '';
+    animationElement.style.borderRight = '0';
     let i = 0;
-    const typingSpeed = 100; // Typing speed in milliseconds
+    const typingSpeed = 100;
     
     const typingInterval = setInterval(() => {
         if (i < text.length) {
@@ -18,17 +19,17 @@ function typeText(text, callback) {
             i++;
         } else {
             clearInterval(typingInterval);
-            animationElement.style.borderRight = '.15em solid #00abeb'; // Show cursor after typing
-            setTimeout(callback, 1000); // Wait before changing text
+            animationElement.style.borderRight = '.15em solid #00abeb'; 
+            setTimeout(callback, 1000); 
         }
     }, typingSpeed);
 }
 
 function startTyping() {
     typeText(texts[index], () => {
-        index = (index + 1) % texts.length; // Cycle through texts
-        startTyping(); // Start typing the next text
+        index = (index + 1) % texts.length; 
+        startTyping(); 
     });
 }
 
-startTyping(); // Initiate the typing effect
+startTyping();
